@@ -1,4 +1,4 @@
-package com.example.dlund.shell
+package com.example.dlund.basicapp
 
 import org.junit.Test
 

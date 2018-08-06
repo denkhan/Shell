@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import com.example.dlund.basicapp.fragments.FragmentOne
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -12,6 +13,8 @@ class MainActivity : AppCompatActivity() {
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
             R.id.navigation_home -> {
+                FragmentOne.newInstance("haha", "haha")
+                supportFragmentManager.beginTransaction()
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_dashboard -> {
@@ -30,8 +33,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        fragmentList = listOf()//fragment1.newInstance()))
-
+        fragmentList = listOf(FragmentOne.newInstance("haha", "haha"))//fragment1.newInstance()))
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
     }

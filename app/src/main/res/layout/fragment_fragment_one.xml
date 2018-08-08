@@ -12,4 +12,12 @@
         android:text="@string/hello_blank_fragment"
         android:textColor="@android:color/background_dark" />
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
 </FrameLayout>
